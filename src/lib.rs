@@ -12,9 +12,12 @@
 //! crate, which contains various convenience functions.
 #![no_std]
 
+use serde::{Deserialize, Serialize};
 pub use {rgb::RGB, rgb::RGB16, rgb::RGB8, rgb::RGBA};
 
-#[derive(Copy, Clone, Debug, Default, Eq, PartialEq, Ord, PartialOrd, Hash)]
+#[derive(
+    Copy, Clone, Debug, Default, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize,
+)]
 pub struct White<C>(pub C);
 
 /// The RGBW Pixel

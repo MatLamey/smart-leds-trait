@@ -3,10 +3,7 @@ name = "smart-leds-trait"
 version = "0.3.1"
 authors = ["David Sawatzke <david-sawatzke@users.noreply.github.com>"]
 edition = "2021"
-categories = [
-    "embedded",
-    "no-std",
-    "hardware-support"]
+categories = ["embedded", "no-std", "hardware-support"]
 description = "A trait for implementing effects, modifiers and drivers for programmable leds"
 documentation = "https://docs.rs/crate/smart-leds-trait"
 license = "MIT OR Apache-2.0"
@@ -15,6 +12,7 @@ repository = "https://github.com/smart-leds-rs/smart-leds-trait"
 
 [dependencies]
 rgb = "0.8"
+serde = { version = "1.0", features = ["serde_derive"] }
 
 [features]
 serde = ["rgb/serde"]
