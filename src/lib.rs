@@ -14,6 +14,9 @@
 
 pub use {rgb::RGB, rgb::RGB16, rgb::RGB8, rgb::RGBA};
 
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+use serde::{Deserialize, Serialize};
+
 #[derive(Copy, Clone, Debug, Default, Eq, PartialEq, Ord, PartialOrd, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct White<C>(pub C);
